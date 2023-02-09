@@ -1,0 +1,122 @@
+
+
+
+
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>CKD Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+ <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Cardio Vascular Disease</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+
+<select id="Make" name="Make">
+    <option value="9">FORD</option>
+    <option value="5">CHEVROLET</option>
+<option value="8">DODGE</option>
+    <option value="2">BMW</option>
+<option value="10">GMC</option>
+    <option value="31">TOYOTA</option>
+<option value="32">VOLKSWAGEN</option>
+    <option value="21">MERCEDES-BENZ</option>
+<option value="6">CHRYSLER</option>
+    <option value="1">AUDI</option>
+<option value="20">MAZDA</option>
+    <option value="33">VOLVO</option>
+<option value="22">NISSAN</option>
+    <option value="25">PONTIAC</option>
+<option value="27">SAAB</option>
+    <option value="28">SATURN</option>
+<option value="30">SUZUKI</option>
+    <option value="11">HONDA</option>
+<option value="29">SUBARU</option>
+    <option value="12">HYUNDAI</option>
+<option value="0">ACURA</option>
+    <option value="7">DAEWOO</option>
+<option value="15">JAGUAR</option>
+    <option value="17">KIA</option>
+
+
+
+  </select><br>
+<select id="Vehicle_Class" name="Vehicle_Class">
+    <option value="0">COMPACT</option>
+    <option value="6">PICKUP TRUCK - STANDARD</option>
+<option value="10">SUV</option>
+    <option value="2">MID-SIZE</option>
+<option value="9">SUBCOMPACT</option>
+    <option value="11">TWO-SEATER</option>
+<option value="7">STATION WAGON - MID-SIZE</option>
+    <option value="1">FULL-SIZE</option>
+<option value="12">VAN - CARGO</option>
+    <option value="13">VAN - PASSENGER</option>
+<option value="3">MINICOMPACT</option>
+    <option value="4">MINIVAN</option>
+<option value="8">STATION WAGON - SMALL</option>
+    <option value="5">PICKUP TRUCK - SMALL</option>
+
+  </select><br>
+
+                <input class="form-input" type="text" name="Engine_Size" placeholder="Enter the engine size"><br>  
+
+<input class="form-input" type="text" name="Cylinders" placeholder="Enter the Cylinders size"><br>
+
+<select id="Transmission" name="Transmission">
+    <option value="0">Automatic</option>
+    <option value="3">Manual</option>
+<option value="1">Automatic with Select Shift</option>
+    <option value="2">Continuously Variable</option>
+  </select><br>
+
+<select id="Fuel_Type" name="Fuel_Type">
+    <option value="0">normal</option>
+    <option value="1">abnormal</option>
+  </select><br>
+
+<select id="red_blood_cell" name="red_blood_cell">
+     <option value="4">Regular Gasoline</option>
+    <option value="3">Premium Gasoline</option>
+     <option value="0">Diesel</option>
+    <option value="1">Ethanol(E85)</option>
+     <option value="2">Natural Gas</option>
+
+  </select><br>
+
+<input class="form-input" type="text" name="Fuel_Consumption_City" placeholder="Enter the Fuel Consumption City(L/100km)"><br>
+
+<input class="form-input" type="text" name="Fuel_Consumption_Hwy" placeholder="Enter the Fuel Consumption Highway(L/100km)"><br>
+
+<input class="form-input" type="text" name="Fuel_Consumption_Comb(mpg)" placeholder="Enter the Combine Fuel Consumption(mpg)"><br>
+
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Venkatesh0610/Pythont"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/venkatesh-a-400459191/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ?? by A.Venkatesh.</p>
+       </div>
+
+    </body>
+</html>
